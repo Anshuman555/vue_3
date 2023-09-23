@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <p>Hi there!, My name is {{ name }} and I am <strong>{{age}}</strong> years old.</p>
+        <button class="mb-2" @click="age++">Add 1 in age</button>
+        <div class="box-wrapper">
+            <div class="box" @mouseover="handleEvent">
+                <div>
+                    <div class="inner">
+                        <strong>mouseover</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="box" @mouseleave="handleEvent">
+                <div>mouseleave</div>
+            </div>
+            <div class="box" @dblClick="handleEvent">
+                <div>double click</div>
+            </div>
+            <div class="box" @mousemove="handleMousemove">
+                <div class="inner">
+                    <div>Cursor position in the div is</div>
+                    <p>{{ posX }} - {{ posY }}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="show-books">
+            <div class="all-books">
+                <div class="book" :class="item.fav === true ? 'fav-book' : ''" v-for="item in books" key="item.id">
+                    <h2 class="title">{{ item.title }}</h2>
+                    <h3><em>- {{ item.author }}</em></h3>
+                    <span @click="makeFav(item)" class="fav">
+                        <span v-if="!item.fav">+</span>
+                        <span v-else>-</span>
+                    </span>
+                </div>
+            </div>
+            <div class="onlyfavbooks">
+                <div class="book" :class="item.fav === true ? 'fav-book' : ''" v-for="item in favBooks" key="item.id">
+                    <h2 class="title">{{ item.title }}</h2>
+                    <h3><em>- {{ item.author }}</em></h3>
+                    <span @click="makeFav(item)" class="fav">
+                        <span v-if="!item.fav">+</span>
+                        <span v-else>-</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>

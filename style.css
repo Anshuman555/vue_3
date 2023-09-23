@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+    background-color: #d3d3d3;
+    color: #000000;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.box-wrapper {
+    display: flex;
+    width: 520px;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.box {
+    height: 200px;
+    max-width: 50%;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.box>div {
+    display: grid;
+    place-items: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+}
+
+.show-books{
+    display: flex;
+    /* width: 300psx; */
+    gap: 50px;
+}
+
+.show-books>div{
+    flex-direction: column;
+}
+
+.book{
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: rgb(89, 141, 96);
+    position: relative;
+    width: 300px;
+}
+
+.book h2{
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.book h3{
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.fav-book{
+    background-color: darkgreen;
+}
